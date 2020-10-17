@@ -14,22 +14,22 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+					<li class="active"><?=anchor("c_start","Home"); ?></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">Referensi <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Kode Gender</a></li>
-							<li><a href="#">Kode Level Pendidikan</a></li>
+							<li><?=anchor("c_gender","Kode Gender"); ?></li>
+							<li><?=anchor("c_eduleve","Kode Level Pendidikan")?></li>
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">Data Pegawai <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Data Pribadi</a></li>
-							<li><a href="#">Data Anak Pegawai</a></li>
-							<li><a href="#">Data Riwayat Pendidikan</a></li>
+							<li><?=anchor("c_pegawai","Data Pribadi");?></li>
+							<li><?=anchor("c_anakpeg","Data Anak Pegawai");?></li>
+							<li><?=anchor("c_edupeg","Data Riwayat Pendidikan");?></li>
 						</ul>
 					</li>
 					<li>
@@ -39,13 +39,11 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">Laporan<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Data Pegawai</a></li>
-							<li><a href="#">Data Kehadiran</a></li>
+							<li><?=anchor("c_rep_peg","Data Pegawai");?></li>
+							<li><?=anchor("c_rep_hadir","Data Kehadiran");?></li>
 						</ul>
                     </li>
-                    <li>
-						<a href="">About</a>
-					</li>
+                    <li><?=anchor("c_about","About")?></li>
 				</ul>
 				<form class="navbar-form navbar-right" role="search">
 					<div class="form-group">

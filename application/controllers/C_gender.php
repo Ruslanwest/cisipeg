@@ -68,5 +68,14 @@ class C_gender extends CI_Controller {
         $this->load->view('v_dbresultmdl',$data);
     }
 
+    //Fungsi untuk Underconst
+    public function index(){
+        $data=array();
+        $data["controler"]=$this->router->class;;
+        $data["method"]=$this->router->method;;
+        $this->load->view("v_temp",$data);
+        
+    }
+
 
 }
