@@ -20,7 +20,7 @@
 							aria-expanded="false">Referensi <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><?=anchor("c_gender","Kode Gender"); ?></li>
-							<li><?=anchor("c_eduleve","Kode Level Pendidikan")?></li>
+							<li><?=anchor("c_edulevel","Kode Level Pendidikan")?></li>
 						</ul>
 					</li>
 					<li class="dropdown">

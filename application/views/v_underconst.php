@@ -1,7 +1,7 @@
 <div class="container">
     <div class="jumbotron">
-        <p><?$controller;?>/<?=$method;?></p>
-        Masih dalam Tahap Development
+        <p><?=$controller;?>/<?=$method;?></p>
+        Underconstucter
     </div>
 
 </div>
