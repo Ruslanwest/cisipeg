@@ -25,6 +25,15 @@ class M_gender extends CI_Model{
         return true;
     }
 
+    //Fungsi untuk melakukan inisiasi Data Gender
+    function initdata(){
+        //Membaca Data yang dikirimkan dari form
+        $data=array();
+        $data["rgender_kode"]=$this->input->post("rgender_kode");
+        $data["rgender_nama"]=$this->input->post("rgender_nama");
+        return $data;
+    }
+
 }
 
 ?>

@@ -45,7 +45,7 @@ class C_gender extends CI_Controller {
         $this->load->view('v_dbresult', $data);
     }
 
-    //Fungsi untuk List Data
+/**    //Fungsi untuk List Data
     public function listdata(){
         $query=$this->db->get("r_gender");
         $this->table->set_heading("Kode Gender","Nama Gender");
@@ -67,7 +67,7 @@ class C_gender extends CI_Controller {
         $data=$this->m_gender->initpost();
         $this->load->view('v_dbresultmdl',$data);
     }
-
+**/
     //Fungsi untuk Underconst
     public function index(){
         $data=array();
@@ -75,6 +75,21 @@ class C_gender extends CI_Controller {
         $data["method"]=$this->router->method;
         $this->load->view("v_temp",$data);
         
+    }
+
+    //Fungsi untuk Form menambah Data
+    public function form2add(){
+        //Deklarasi Variable untuk data
+        $data=array();
+        //Melakukan load dari model gender
+        $this->load->model("m_gender");
+        //Load fungsi init_data dari model Gender
+        $data=$this->m_gender->initdata();
+        //Deklarasi variable myview
+        $data["myview"]="v_frmgender";
+        //Load view Main untuk fungsi form2add
+        $this->load->view("v_main", $data);
+
     }
 
 
