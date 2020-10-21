@@ -92,5 +92,15 @@ class C_gender extends CI_Controller {
 
     }
 
+    //Fungsi untuk Simpan ke Database
+    public function save4add(){
+        $data=array();
+        $this->load->model("m_gender");
+        $data=$this->m_gender->initdata();
+        $data["saveresult"]=$this->m_gender->insertdata($data);
+        $data["myview"]="v_frmgendersaved";
+        $this->load->view("v_main", $data);
+    }
+
 
 }

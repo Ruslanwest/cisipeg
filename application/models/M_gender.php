@@ -34,6 +34,27 @@ class M_gender extends CI_Model{
         return $data;
     }
 
+    //Fungsi untuk Insert Data
+    function insertdata($data){
+        //query untuk periksa data sudah ada atau belum
+        $this->db->like('rgender_kode',$data["rgender_kode"]);
+        $this->db->from('r_gender');
+        $c=$this->db->count_all_results();
+
+        //Pengecekan array
+        if (!$c) {
+            $rec=array("rgender_kode"=>$data["rgender_kode"],"rgender_nama"=>$data["rgender_nama"]);
+
+            //Proses Simpan
+            $this->db->insert("r_gender", $rec);
+            $result=$this->db->affected_rows();
+            $result=($result)?"Berhasil Disimpan":"Gagal Disimpan! ";
+        } else{
+            $result="Gagal simpan!".br();
+            $result.= " Key : ".$data["rgender_kode"]."Sudah ada!"; 
+        } return $result;
+    }
+
 }
 
 ?>
