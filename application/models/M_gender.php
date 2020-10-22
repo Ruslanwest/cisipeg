@@ -51,7 +51,7 @@ class M_gender extends CI_Model{
             $result=($result)?"Berhasil Disimpan":"Gagal Disimpan! ";
         } else{
             $result="Gagal simpan!".br();
-            $result.= " Key : ".$data["rgender_kode"]."Sudah ada!"; 
+            $result.= " Key : ".$data["rgender_kode"]." Sudah ada!"; 
         } return $result;
     }
 
