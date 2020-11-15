@@ -4,16 +4,17 @@ class C_edulevel extends CI_Controller {
     //Fungsi untuk Underconst
     public function index(){
         $data=array();
-        $data["controller"]=$this->router->fetch_class();
-        $data["method"]=$this->router->fetch_method();
+        $data["controller"]=$this->router->fetch_class();;
+        $data["method"]=$this->router->fetch_method();;
         $this->load->view("v_temp",$data);
     }
 
-    public function form4add(){
+    public function form2add(){
         $data=array();
         $this->load->model("m_edulevel");
         $data=$this->m_edulevel->initdata();
         $data["myview"]="v_frmedulevel";
+        $this->load->view("v_main", $data);
     }
 
     public function save4add(){
@@ -21,7 +22,7 @@ class C_edulevel extends CI_Controller {
         $this->load->model("m_edulevel");
         $data=$this->m_edulevel->initdata();
         $data["saveresult"]=$this->m_edulevel->insertdata($data);
-        $data["myview"]="v_frmgedulevelsaved";
+        $data["myview"]="v_frmedulevelsaved";
         $this->load->view("v_main", $data);
     }
 }
