@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="jumbotron">
-		<form action="<?=site_url("c_gender/save4add") ?>" method="post">
+		<form action="<?=site_url("iotacrud/save4add/".$namamodel);?>" method="post">
 			<h3>Form Input Gender</h3>
 			<div class="form-group">
 				<label for="rgender_kode">Kode Gender</label>
@@ -16,4 +16,4 @@
 			</div>
 		</form>
 	</div>
-</div>
+</div

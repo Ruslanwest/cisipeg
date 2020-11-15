@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="jumbotron">
-		<form action="<?=site_url("c_edulevel/save4add");?>" role="form" class="form-horizontal" method="POST">
+		<form action="<?=site_url("iotacrud/save4add".$namamodel);?>" role="form" class="form-horizontal" method="POST">
 			<div class="row">
 				<div class="col-sm-2"></div>
 				<div class="col-sm-10">

@@ -25,6 +25,14 @@ class M_gender extends CI_Model{
         return true;
     }
 
+    function appdata($key){
+        //baca data yang dikirimkan dari form
+        $data=array();
+        $data["viewadd"]="v_frmgender";
+        return $data[$key];
+    }
+
+
     //Fungsi untuk melakukan inisiasi Data Gender
     function initdata(){
         //Membaca Data yang dikirimkan dari form
@@ -55,6 +63,7 @@ class M_gender extends CI_Model{
         } return $result;
     }
 
+   
 }
 
 ?>

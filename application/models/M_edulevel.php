@@ -33,6 +33,13 @@ class M_edulevel extends CI_Model{
         } return $result;
     }
 
+    function appdata($key){
+        //baca data yang dikirimkan dari form
+        $data=array();
+        $data["viewadd"]="v_frmedulevel.php";
+        return $data[$key];
+    }
+
 }
 
 
